@@ -1,8 +1,8 @@
 set -gxp PATH /usr/local/lib/python3.9/dist-packages/ /usr/local/sbin $HOME/go/bin /snap/bin
 set -gx GOBIN $HOME/go/bin
 set -gx GOPATH $HOME/go
-set -gx EDITOR vim
-set -gx FZF_CTRL_T_COMMAND vim
+set -gx EDITOR nvim
+set -gx FZF_CTRL_T_COMMAND nvim
 
 # git prompt settings
 set -g __fish_git_prompt_show_informative_status 1
