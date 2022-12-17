@@ -8,8 +8,6 @@ bind C-f send-prefix
 
 set-environment -g PATH "/usr/local/bin:/bin:/usr/bin"
 
-set-option -g default-shell /usr/bin/fish
-
 # toogle last window by hitting again C-f
 bind-key C-f last-window
 
@@ -38,12 +36,8 @@ set -g display-time 4000
 set-option -ga terminal-overrides ",xterm-256color:Tc"
 set -g default-terminal "screen-256color"
 
-# Split horiziontal and vertical splits, instead of % and ". We also open them
-# in the same directory.  Because we use widescreens nowadays, opening a
-# vertical split that takes half of the screen is not worth. For vertical we
-# only open 100 lines width, for horizontal it's 20 columns.
-bind-key v split-window -h -l 100 -c '#{pane_current_path}'
-bind-key s split-window -v -l 30 -c '#{pane_current_path}'
+bind-key v split-window -h 
+bind-key s split-window -v
 
 # Pressing Ctrl+Shift+Left (will move the current window to the left. Similarly
 # right. No need to use the modifier (C-b).
@@ -72,10 +66,10 @@ bind-key -T edit-mode-vi Down send-keys -X history-down
 bind-key -T copy-mode-vi 'v' send-keys -X begin-selection
 
 # copy text with `y` in copy mode
-bind-key -T copy-mode-vi 'y' send -X copy-selection-and-cancel
+bind-key -T copy-mode-vi 'y' send -X copy-pipe-and-cancel 'xclip -in -selection clipboard'
 
 # copy text with mouse selection without pressing any key
-bind-key -T copy-mode-vi MouseDragEnd1Pane send -X copy-selection-and-cancel
+bind-key -T copy-mode-vi MouseDragEnd1Pane send -X copy-pipe-and-cancel 'xclip -in -selection clipboard'
 
 # emacs key bindings in tmux command prompt (prefix + :) are better than
 # vi keys, even for vim users
@@ -112,17 +106,17 @@ bind-key = select-layout even-horizontal
 bind-key | select-layout even-vertical
 
 # Resize panes
-bind-key J resize-pane -D 10
-bind-key K resize-pane -U 10
-bind-key H resize-pane -L 10
-bind-key L resize-pane -R 10
+bind-key -r j resize-pane -D 5
+bind-key -r k resize-pane -U 5
+bind-key -r h resize-pane -L 5
+bind-key -r l resize-pane -R 5
 
 # Select panes 
 # NOTE(arslan): See to prevent cycling https://github.com/tmux/tmux/issues/1158
-bind-key j select-pane -D 
-bind-key k select-pane -U 
-bind-key h select-pane -L 
-bind-key l select-pane -R 
+#bind-key j select-pane -D 
+#bind-key k select-pane -U 
+#bind-key h select-pane -L 
+#bind-key l select-pane -R 
 
 # Disable confirm before killing
 bind-key x kill-pane
@@ -133,6 +127,7 @@ set -g @plugin 'tmux-plugins/tpm'
 set -g @plugin 'tmux-plugins/tmux-open'
 set -g @plugin 'tmux-plugins/tmux-yank'
 set -g @plugin 'tmux-plugins/tmux-prefix-highlight'
+set -g @plugin 'christoomey/vim-tmux-navigator'
 
 source-file ~/.tmux/tmux-light.conf
 
