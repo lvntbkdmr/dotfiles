@@ -23,6 +23,7 @@ return require('packer').startup(function(use)
 
   use 'christoomey/vim-tmux-navigator'
   use { "ellisonleao/gruvbox.nvim" }
+  use 'scrooloose/nerdtree'
 
   use({'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'})
   use('nvim-treesitter/playground')
