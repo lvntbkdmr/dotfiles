@@ -1,1 +1,3 @@
 tmux/.tmux/*
+fish/.config/fish/conf.d/*
+fish/.config/fish/fish_variables
