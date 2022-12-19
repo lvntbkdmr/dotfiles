@@ -38,3 +38,4 @@ source ~/.config/fish/private.fish
 set -g fish_user_paths "/usr/local/opt/openssl@1.1/bin" $fish_user_paths
 set -g fish_user_paths "/usr/local/opt/mysql-client/bin" $fish_user_paths
 
+theme_gruvbox
