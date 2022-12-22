@@ -20,7 +20,7 @@ local cmp_mappings = lsp.defaults.cmp_mappings({
 })
 
 lsp.set_preferences({
-  sign_icons = { }
+
 })
 
 lsp.setup_nvim_cmp({
