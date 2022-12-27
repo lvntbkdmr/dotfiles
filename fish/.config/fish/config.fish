@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 set -gxp PATH /usr/local/lib/python3.9/dist-packages/ /usr/local/sbin $HOME/go/bin /snap/bin /home/pi/ws/lua-language-server/bin
+=======
+set -gxp PATH /usr/local/lib/python3.9/dist-packages/ /usr/local/sbin $HOME/go/bin /snap/bin /opt/homebrew/bin
+>>>>>>> 257f047862f7becf7f63ee7fb292967240c87e3f
 set -gx GOBIN $HOME/go/bin
 set -gx GOPATH $HOME/go
 set -gx EDITOR nvim
