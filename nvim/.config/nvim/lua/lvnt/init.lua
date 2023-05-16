@@ -1,5 +1,6 @@
 require("lvnt.set")
 require("lvnt.remap")
+require("lvnt.packer")
 require("nvim-tree").setup()
 
 
