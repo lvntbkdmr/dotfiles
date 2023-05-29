@@ -55,17 +55,17 @@ scrolling:
 font:
   # The normal (roman) font face to use.
   normal:
-    family: SF Mono
+    family: Berkeley Mono
     style: Regular
 
   # The bold font face
   bold:
-    family: SF Mono
+    family: Berkeley Mono
     style: Bold
 
   # The italic font face
   italic:
-    family: SF Mono
+    family: Berkeley Mono
     style: Regular Italic
 
   # Point size of the font
