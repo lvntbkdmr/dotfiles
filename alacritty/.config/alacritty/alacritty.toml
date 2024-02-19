@@ -41,16 +41,9 @@ style = "Regular"
 x = 0
 y = 0
 
-#[[keyboard.bindings]]
-#key = "N"
-#mods = "Command"
-#
-#[keyboard.bindings.command]
-#args = ["-nb", "io.alacritty"]
-#program = "open"
-
 [keyboard]
 bindings = [
+    {key = "N", mods = "Command", command = {program = "open", args = ["-nb", "io.alacritty"]}},
     {action = "Paste", key = "V", mods = "Command"},
     {action = "Copy", key = "C", mods = "Command"},
     {action = "Quit", key = "Q", mods = "Command"},
