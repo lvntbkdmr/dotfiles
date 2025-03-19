@@ -41,3 +41,6 @@ set -g fish_user_paths "/usr/local/opt/mysql-client/bin" $fish_user_paths
 #theme_gruvbox dark medium
 
 starship init fish | source
+
+# Created by `pipx` on 2025-02-09 19:16:22
+set PATH $PATH /Users/lvnt/.local/bin
