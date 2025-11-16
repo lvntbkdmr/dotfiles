@@ -44,3 +44,6 @@ starship init fish | source
 
 # Created by `pipx` on 2025-02-09 19:16:22
 set PATH $PATH /Users/lvnt/.local/bin
+
+# Added by Windsurf
+fish_add_path /Users/lvnt/.codeium/windsurf/bin
